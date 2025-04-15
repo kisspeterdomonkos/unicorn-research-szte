@@ -5,23 +5,23 @@
   
   body {
     font-family: Verdana;
-    background-color: rgb(253, 246, 255);
-    color: rgb(51, 51, 51);
+    background-color: rgb(58, 58, 58);
+    color: rgb(241, 241, 241);
   }
   
   .icon {
     margin-right: 5px;
   }
-
+  
   .navbar {
     display: flex;
     padding: 20px;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(90deg, rgb(214, 171, 255), rgb(120, 187, 255));
+    background: linear-gradient(90deg, rgb(58, 0, 102), rgb(0, 51, 77));
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
-
+  
   .nav-links a {
     padding: 20px;
     margin-left: 5px;
@@ -37,7 +37,7 @@
 
   .nav-links a:hover {
     color: rgb(165, 78, 223);
-    background-color: rgb(233, 233, 233);
+    background-color: #e9e9e9;
   }
 
   .hover-icon {
@@ -53,8 +53,8 @@
   }
 
   .register-button {
-    background-color: rgb(240, 227, 255) !important;
-    color: rgb(132, 55, 204) !important;
+    background-color: rgb(73, 73, 73) !important;
+    color: rgb(255, 255, 255) !important;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
   
@@ -62,5 +62,3 @@
     background-color: rgb(240, 227, 255);
     color: rgb(132, 55, 204);
   }
-
-
