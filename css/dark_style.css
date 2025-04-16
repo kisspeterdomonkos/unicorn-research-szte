@@ -9,6 +9,10 @@
     color: rgb(241, 241, 241);
   }
   
+  main {
+    min-height: calc(100vh - 200px);
+  }
+
   .icon {
     margin-right: 5px;
   }
@@ -61,4 +65,42 @@
   .register-button:hover {
     background-color: rgb(240, 227, 255);
     color: rgb(132, 55, 204);
+  }
+
+  footer {
+    background-color: rgb(73, 73, 73);
+    color: rgb(255, 255, 255);
+    padding: 25px;
+    font-size: 14px;
+  }
+  
+  .footer-container {
+    display: flex;
+  }
+  
+  .footer-section {
+    flex: 1 1 200px;
+  }
+  
+  .footer-section h3,
+  .footer-section h4 {
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+  }
+  
+  .footer-section ul {
+    list-style: none;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-section a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+  
+  .footer-section a:hover {
+    text-decoration: underline;
   }
