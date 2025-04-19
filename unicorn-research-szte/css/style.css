@@ -1,0 +1,401 @@
+:root {
+  --base-color: rgb(253, 246, 255);
+  --main-content-color: rgb(247, 235, 255);
+  --text-color: rgb(88, 88, 88);
+  --nav-first-color: rgb(214, 171, 255);
+  --nav-second-color: rgb(120, 187, 255);
+  --item-active-color: rgb(165, 78, 223);
+  --register-text-color: rgb(132, 55, 204);
+  --other-background-color: rgb(240, 227, 255);
+  --hover-color: rgb(233, 233, 233);
+  --footer-text-color: rgb(76, 0, 102);
+}
+
+.darkmode {
+  --base-color: rgb(58, 58, 58);
+  --main-content-color: rgb(73, 73, 73);
+  --text-color: rgb(241, 241, 241);
+  --nav-first-color: rgb(58, 0, 102);
+  --nav-second-color: rgb(0, 51, 77);
+  --item-active-color: rgb(165, 78, 223);
+  --register-text-color: rgb(214, 171, 255);
+  --other-background-color: rgb(73, 73, 73);
+  --hover-color: rgb(233, 233, 233);
+  --footer-text-color: rgb(241, 241, 241);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Navigációs sáv */
+  .navbar {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, var(--nav-first-color), var(--nav-second-color));
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .nav-links a {
+    padding: 20px;
+    margin-left: 5px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    border-radius: 8px;
+  }
+  
+  .nav-links a.active {
+    color: var(--item-active-color);
+  }
+
+  .nav-links a:hover {
+    color: var(--item-active-color);
+    background-color: rgb(233, 233, 233);
+  }
+
+  .hover-icon {
+    display: none;
+  }
+  
+  .nav-links a:hover .default-icon {
+    display: none;
+  }
+
+  .nav-links a:hover .hover-icon {
+    display: inline;
+  }
+
+  .register-button {
+    background-color: var(--other-background-color) !important;
+    color: var(--register-text-color) !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .icon {
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+  }
+
+  #theme-switch img:last-child {
+    display: none;
+  }
+
+  .darkmode #theme-switch img:first-child {
+    display: none;
+  }
+
+ .darkmode #theme-switch img:last-child {
+  display:inline-flex;
+ }
+
+ /* Fő tartalom */
+  body {
+    font-family: Verdana;
+    background-color: var(--base-color);
+    color: var(--text-color);
+  }
+  
+  main {
+    min-height: calc(100vh - 200px);
+    flex: 3;
+    padding: 20px;
+    background-color: var(--main-content-color);
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+
+  main a, .side a {
+    color: var(--item-active-color);
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  main a:hover, .side a:hover {
+    text-decoration: underline;
+  }
+
+  .row 
+  {  
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 32px auto;
+  }
+
+  .row a {
+    color: var(--register-text-color);
+  }
+
+  .side 
+  {
+    flex: 1;
+    padding: 20px;
+    background-color: var(--main-content-color);
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    font-size: 14.5px;
+  }
+
+  .side a {
+    color: var(--register-text-color);
+  }
+
+  main h2, .side h2{
+    color: var(--register-text-color);
+    margin-bottom: 16px;
+  }
+  
+  main p, .side p {
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  ol li {
+    margin-left: 40px;
+    margin-bottom: 18px;
+    font-size: 16px;
+  }
+
+  main ul li {
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+
+  button {
+    margin-top: 16px;
+    padding: 10px 16px;
+    background: linear-gradient(135deg, rgb(224, 147, 255), rgb(212, 105, 242));
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  form label {
+    font-weight: bold;
+    color: var(--register-text-color);
+  }
+  
+  form input,
+  form textarea {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid rgb(215, 127, 239);
+    font-size: 16px;
+  }
+
+  /* Footer */
+  footer {
+    background-color: var(--other-background-color);
+    color: var(--footer-text-color);
+    padding: 25px;
+    font-size: 14px;
+  }
+  
+  .footer-container {
+    display: flex;
+  }
+  
+  .footer-section {
+    flex: 1 1 200px;
+  }
+  
+  .footer-section h3,
+  .footer-section h4 {
+    margin-bottom: 10px;
+    color: var(--footer-text-color);
+  }
+  
+  .footer-section ul {
+    list-style: none;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-section a {
+    color: var(--register-text-color);
+    text-decoration: none;
+  }
+  
+  .footer-section a:hover {
+    text-decoration: underline;
+  }
+
+
+  /* Unikornis oldal*/
+  .unicorn-card {
+    display: flex;
+    background-color: var(--base-color);
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+    margin: 0 auto 32px auto;
+    max-width: 900px;
+    text-align: left;
+  }
+  
+  .unicorn-card img {
+    width: 250px;
+    height: auto;
+    margin-bottom: 16px;
+    margin-right: 16px;
+  }
+  
+  .unicorn-card h3 {
+    color: var(--register-text-color);
+    margin-bottom: 8px;
+  }
+
+  .unicorn-card:hover {
+    box-shadow: 0 10px 25px rgba(153, 102, 204, 0.4);
+  }
+
+  /* Webshop */
+  .item {
+    background: var(--base-color);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(153, 102, 204, 0.2);
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .item:hover {
+    box-shadow: 0 10px 25px rgba(153, 102, 204, 0.4);
+  }
+  
+  .item h2 {
+    color: var(--register-text-color);
+    margin-bottom: 8px;
+    font-size: 23px;
+  }
+
+  .item p {
+    color: var(--text-color);
+    margin: 4px 0;
+  }
+
+  .item img {
+    height: 100px;
+    width: auto;
+    border-radius: 12px;
+  }
+
+  /* Fórum */
+  .intro h1 {
+    color: var(--register-text-color);
+    font-size: 32px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  
+  .intro p {
+    font-size: 18px;
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 32px;
+  }
+  
+  .forum-topics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  
+  .forum-topic {
+    background-color: var(--base-color);
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 8px 15px rgba(150, 100, 200, 0.1);
+  }
+  
+  .forum-topic:hover {
+    box-shadow: 0 10px 25px rgba(153, 102, 204, 0.4);
+  }
+  
+  .forum-topic h2 {
+    font-size: 20px;
+    color: var(--register-text-color);
+    margin-bottom: 8px;
+  }
+  
+  .forum-topic p {
+    color: var(--text-color);
+    margin-bottom: 16px;
+  }
+  
+  /* Reszponzivitás */
+  @media screen and (max-width: 900px) {
+    .row {
+      flex-direction: column;
+      padding: 0 16px;
+    }
+
+    footer .footer-container {
+      font-size: smaller;
+      gap: 16px;
+    }
+  }
+
+  @media screen and (max-width: 1144px) {
+    .forum-topics {
+      grid-template-columns: auto;
+    }
+    .unicorn-card img {
+      height: 250px;
+      width: auto;
+    }
+  }
+
+  @media (max-width: 1465px) {
+    .navbar {
+      flex-direction: column;
+    }
+  
+    .nav-left,
+    .nav-right {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .nav-links a {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .register-button {
+      margin: 0 auto 8px auto !important;
+      display: block;
+      width: fit-content !important;
+    }
+
+    .row {
+      padding: 0 16px;
+    }
+  }
+  
